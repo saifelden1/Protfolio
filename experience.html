@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work Experience - Saif Elden</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-blue-600 font-medium flex items-center hover:text-blue-800 transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd" />
+                </svg>
+                Back to Portfolio
+            </a>
+            <span class="text-xl font-bold text-gray-900">Work Experience</span>
+            <div class="w-24"></div> <!-- Spacer for centering -->
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="max-w-6xl mx-auto px-4 py-20 text-center">
+        <h1 class="text-5xl font-bold tracking-tight text-gray-900 mb-6">Professional Experience</h1>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+            A timeline of my professional roles in embedded systems, hardware engineering, and education.
+        </p>
+    </header>
+
+    <!-- Experience Timeline Sections -->
+    <section class="max-w-6xl mx-auto px-4 py-12 space-y-32 mb-24 overflow-hidden">
+        
+        <!-- Experience 1: Tomatiki -->
+        <div class="flex flex-col md:flex-row items-center gap-12 group">
+            <div class="w-full md:w-1/2 flex justify-start perspective-1000 relative">
+                <div class="absolute -top-6 -left-6 z-20 w-24 h-24 bg-white rounded-full p-2 shadow-xl border-4 border-emerald-100 flex items-center justify-center">
+                    <img src="photos/tomatiki logo.png" alt="Tomatiki Logo" class="w-full h-full object-contain rounded-full">
+                </div>
+                <div class="w-11/12 md:w-4/5 h-80 bg-gray-200 rounded-2xl shadow-xl overflow-hidden transform transition duration-500 hover:scale-105 hover:-rotate-2 shadow-emerald-500/20 -translate-x-4">
+                    <img src="photos/tomatiki.png" alt="Tomatiki Smart Solutions" class="w-full h-full object-cover">
+                </div>
+            </div>
+            <div class="w-full md:w-1/2">
+                <h3 class="text-xs font-bold text-emerald-600 uppercase tracking-wider mb-2">Hardware & Embedded Engineer</h3>
+                <h2 class="text-3xl font-bold mb-4 text-gray-900">Tomatiki Smart Solutions</h2>
+                <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                    At Tomatiki, I engineered smart agricultural and industrial solutions. My initial major project was developing a comprehensive <strong>Beehive Monitoring System</strong>.
+                </p>
+                <ul class="list-disc pl-5 text-gray-600 space-y-2">
+                    <li>Developed an ESP32-based beehive monitor that tracks temperature, humidity, and weight.</li>
+                    <li>Utilized Wi-Fi/HTTP Post protocols to seamlessly send the telemetry data to a centralized web server for real-time monitoring and analytics by beekeepers.</li>
+                    <li>Designed hardware circuits and PCBs for various other industrial products, bridging physical sensors with cloud interfaces.</li>
+                </ul>
+                <div class="mt-4 flex gap-2">
+                    <img src="photos/tomatiki 2.png" class="h-16 w-16 object-cover rounded shadow border" alt="Tomatiki details">
+                    <img src="photos/tomatiki 3.png" class="h-16 w-16 object-cover rounded shadow border" alt="Tomatiki details">
+                </div>
+            </div>
+        </div>
+
+        <!-- Experience 2: ChemTech (Modified Full Layout) -->
+        <div class="flex flex-col items-center gap-12 group pt-16">
+            <div class="w-full flex justify-center perspective-1000 relative">
+                <div class="absolute -top-12 md:right-1/4 z-20 w-32 h-32 bg-white rounded-full p-2 shadow-xl border-4 border-blue-100 flex items-center justify-center">
+                    <img src="photos/chemtech logo.jpg" alt="ChemTech Logo" class="w-full h-full object-contain rounded-full">
+                </div>
+                <div class="w-full md:w-3/4 h-64 md:h-[500px] bg-gray-200 rounded-2xl shadow-xl overflow-hidden shadow-blue-500/20">
+                    <img src="photos/chemtech work.png" alt="ChemTech Projects" class="w-full h-full object-cover">
+                </div>
+            </div>
+            
+            <div class="w-full md:w-3/4 text-left">
+                <h3 class="text-xs font-bold text-blue-600 uppercase tracking-wider mb-2">Embedded Systems & Hardware Design</h3>
+                <h2 class="text-4xl font-bold mb-4 text-gray-900">ChemTech</h2>
+                <p class="text-xl text-gray-700 leading-relaxed mb-8">
+                    Designed and programmed complex embedded controllers for specialized industrial and medical devices, ensuring strict reliability and safety standards.
+                </p>
+                <div class="mt-4 w-full">
+                    <h4 class="text-xl font-bold text-gray-800 mb-4">Core Projects Delivered:</h4>
+                    <ul class="list-disc pl-5 text-gray-600 space-y-3 mb-12 text-lg">
+                        <li><strong>Blood Centrifuge:</strong> Engineered precise motor control logic for high-speed separation of blood components.</li>
+                        <li><strong>Autoclave Sterilizer:</strong> Programmed strict temperature and high-pressure steam cycles to sanitize medical equipment safely.</li>
+                        <li><strong>Heating Systems:</strong> Designed closed-loop feedback controllers for sustained industrial thermal regulation.</li>
+                        <li><strong>Fluid & Water Systems:</strong> Integrated sensors and valves for automated, exact medical-grade fluid dispensing.</li>
+                    </ul>
+                    
+                    <h4 class="text-xl font-bold text-gray-800 mb-6">Execution & Demonstrations:</h4>
+                    <div class="flex flex-col gap-10">
+                        <video controls class="w-full rounded-xl shadow-lg border border-gray-200" title="Autoclave Screen UI">
+                            <source src="photos/screen.mp4" type="video/mp4">
+                        </video>
+                        <video controls class="w-full rounded-xl shadow-lg border border-gray-200" title="Chemtech Implementation">
+                            <source src="photos/chemtech work.mp4" type="video/mp4">
+                        </video>
+                        <video controls class="w-full rounded-xl shadow-lg border border-gray-200" title="Chemtech Demo">
+                            <source src="photos/chemtech workl.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Experience 3: iSchool (Photo Left) -->
+        <div class="flex flex-col md:flex-row items-center gap-12 group">
+            <div class="w-full md:w-1/2 flex justify-start perspective-1000 relative">
+                <div class="absolute -top-6 -left-6 z-20 w-24 h-24 bg-white rounded-full p-2 shadow-xl border-4 border-indigo-100 flex items-center justify-center">
+                    <img src="photos/ischool logo.png" alt="iSchool Logo" class="w-full h-full object-contain rounded-full">
+                </div>
+                <div class="w-11/12 md:w-4/5 h-80 bg-gray-200 rounded-2xl shadow-xl overflow-hidden transform transition duration-500 hover:scale-105 hover:-rotate-2 shadow-indigo-500/20 -translate-x-4 flex items-center justify-center bg-white p-6">
+                    <img src="photos/ischool logo.png" alt="iSchool Program" class="w-2/3 h-2/3 object-contain opacity-20">
+                </div>
+            </div>
+            <div class="w-full md:w-1/2">
+                <h3 class="text-xs font-bold text-indigo-600 uppercase tracking-wider mb-2">Jul 2025 - Dec 2025 | DEMI Project</h3>
+                <h2 class="text-3xl font-bold mb-4 text-gray-900">iSchool - Coding Instructor</h2>
+                <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                    Delivered coding fundamentals to over 50 students across two distinct groups. It was a highly rewarding experience to simplify complex logic into fun, digestible concepts for young minds.
+                </p>
+                <ul class="list-disc pl-5 text-gray-600 space-y-2">
+                    <li>Conducted 40+ interactive educational sessions.</li>
+                    <li>Focused intensely on logic development and problem-solving skills for kids.</li>
+                </ul>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-950 py-8 text-center text-gray-500 text-sm border-t border-gray-800">
+        <p>&copy; 2026 Saif Elden. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

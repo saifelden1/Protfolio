@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <!-- Tailwind CSS for styling without writing custom CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-xl font-bold text-blue-600">Saif Elden</a>
+            <div class="space-x-6 hidden md:block text-sm font-medium">
+                <a href="#about" class="hover:text-blue-600 transition">About</a>
+                <a href="experience.html" class="hover:text-blue-600 transition">Experience</a>
+                <a href="#projects" class="hover:text-blue-600 transition">Projects</a>
+                <a href="volunteering.html" class="hover:text-blue-600 transition">Volunteering</a>
+                <a href="#contact" class="hover:text-blue-600 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="max-w-6xl mx-auto px-4 py-20 md:py-28 flex flex-col items-center text-center relative overflow-hidden">
+        
+        <!-- Profile Photo -->
+        <div class="mb-8 relative rounded-full p-2 bg-gradient-to-tr from-blue-500 to-indigo-600 shadow-xl">
+            <img src="photos/SaifPHoto.jpeg" alt="Saif Elden Mahmoud" class="w-40 h-40 object-cover rounded-full border-4 border-white">
+        </div>
+
+        <h1 class="text-5xl md:text-6xl font-bold tracking-tight text-gray-900 mb-6">
+            Hi, I'm <span class="text-blue-600">Saif</span>
+        </h1>
+        <h2 class="text-2xl text-gray-700 font-medium mb-4">Mechatronics Engineering Student & Embedded Systems</h2>
+        <p class="text-lg text-gray-600 max-w-2xl mb-10">
+            I specialize in embedded systems, hardware design, and automation. Experienced with microcontrollers, PCB design, motor control, and embedded C/C++.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4 z-10 mb-8">
+            <a href="#projects" class="bg-blue-600 text-white px-8 py-3 rounded-full font-medium shadow-md hover:bg-blue-700 transition">View My Work</a>
+            <a href="saif-elden-mahmoud-ATS-CV.pdf" download class="bg-indigo-600 text-white px-8 py-3 rounded-full font-medium shadow-md hover:bg-indigo-700 transition inline-flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+                Download CV
+            </a>
+            <a href="https://github.com/saifelden1" target="_blank" class="bg-white border border-gray-300 text-gray-700 px-8 py-3 rounded-full font-medium shadow-sm hover:bg-gray-50 transition inline-flex items-center">
+                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/saifeldeen2004/" target="_blank" class="bg-[#0A66C2] border border-[#0A66C2] text-white px-8 py-3 rounded-full font-medium shadow-sm hover:bg-[#004182] transition inline-flex items-center">
+                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                LinkedIn
+            </a>
+        </div>
+    </header>
+
+    <!-- Projects Section -->
+    <section id="projects" class="bg-gray-100 py-20">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center text-gray-900">Featured Projects</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Project 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200 transition hover:shadow-lg cursor-pointer project-card flex flex-col" onclick="openModal('ev-control')">
+                    <div class="h-48 bg-blue-100 relative">
+                        <img src="photos/apexwork.jpeg" alt="EV Control System" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <span class="text-xs font-bold text-blue-600 uppercase tracking-wider mb-2">Embedded C / IoT / Hardware Design</span>
+                        <h3 class="text-xl font-bold mb-3 text-gray-900">EV Embedded Control</h3>
+                        <p class="text-gray-600 text-sm mb-6 line-clamp-3">
+                            Developed an EV control system from scratch for Shell Eco-Marathon using three STM32 microcontrollers. Features FOC, custom PCBs, electronic differential, and LoRaWAN telemetry.
+                        </p>
+                        <button class="text-blue-600 text-sm font-medium hover:underline focus:outline-none mt-auto text-left">Read Full Data &rarr;</button>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200 transition hover:shadow-lg cursor-pointer project-card flex flex-col" onclick="openModal('pc-control')">
+                    <div class="h-48 bg-indigo-50 relative overflow-hidden flex items-center justify-center border-b border-indigo-100">
+                        <div class="transform scale-[0.6] origin-center -mt-6">
+                            <div class="flex flex-row items-center justify-center w-full gap-4 px-4">
+                                <div class="w-16 h-28 bg-gray-800 rounded-xl border-[3px] border-gray-300 shadow-xl flex flex-col justify-end p-2 relative">
+                                    <div class="bg-indigo-500 w-full h-8 rounded text-[8px] text-white flex items-center justify-center font-bold">App</div>
+                                    <div class="absolute top-2 left-1/2 transform -translate-x-1/2 w-4 h-1 bg-gray-600 rounded-full"></div>
+                                </div>
+                                <div class="flex flex-col items-center">
+                                    <span class="text-xs font-bold text-indigo-500 mb-1">TCP Socket</span>
+                                    <div class="flex space-x-1">
+                                        <div class="w-3 h-3 bg-indigo-300 rounded-full"></div>
+                                        <div class="w-3 h-3 bg-indigo-400 rounded-full"></div>
+                                        <div class="w-3 h-3 bg-indigo-500 rounded-full"></div>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col items-center">
+                                    <div class="w-32 h-24 bg-gray-200 border-4 border-gray-700 rounded-lg shadow-lg relative flex flex-col pt-1">
+                                        <div class="w-full bg-gray-800 text-[10px] text-green-400 font-mono text-left px-2 py-1 h-full overflow-hidden">
+                                            > Listening<br>> volume_up<br>> Executing
+                                        </div>
+                                    </div>
+                                    <div class="w-8 h-4 bg-gray-400"></div>
+                                    <div class="w-20 h-2 bg-gray-600 rounded"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <span class="text-xs font-bold text-indigo-600 uppercase tracking-wider mb-2">C++ / Networking</span>
+                        <h3 class="text-xl font-bold mb-3 text-gray-900">Remote PC Server</h3>
+                        <p class="text-gray-600 text-sm mb-6 line-clamp-3">
+                            Built a TCP server in C++ to receive and execute remote PC commands, utilizing a modular architecture and SOLID principles.
+                        </p>
+                        <button class="text-indigo-600 text-sm font-medium hover:underline focus:outline-none mt-auto text-left">Read Full Data &rarr;</button>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200 transition hover:shadow-lg cursor-pointer project-card flex flex-col" onclick="openModal('tomatiki')">
+                    <img src="photos/tomatiki 88.png" alt="Tomatiki PCBs" class="w-full h-48 object-cover border-b border-gray-200">
+                    <div class="p-6 flex-grow flex flex-col">
+                        <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider mb-2">Hardware Design / Embedded</span>
+                        <h3 class="text-xl font-bold mb-3 text-gray-900">Industrial & Agri PCBs</h3>
+                        <p class="text-gray-600 text-sm mb-6 line-clamp-3">
+                            Developed over 10 custom PCBs for various industrial and agricultural products, including a refrigerator tester and a LoRa-based pump & valve management network.
+                        </p>
+                        <button class="text-emerald-600 text-sm font-medium hover:underline focus:outline-none mt-auto text-left">Read Full Data &rarr;</button>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200 transition hover:shadow-lg cursor-pointer project-card flex flex-col" onclick="openModal('robo-soccer')">
+                    <img src="photos/rc car.jpeg" alt="Robo-Soccer RC Car" class="w-full h-48 object-cover border-b border-gray-200" style="object-position: center;">
+                    <div class="p-6 flex-grow flex flex-col">
+                        <span class="text-xs font-bold text-orange-600 uppercase tracking-wider mb-2">Robotics / Actuators</span>
+                        <h3 class="text-xl font-bold mb-3 text-gray-900">Robo-Soccer RC Car</h3>
+                        <p class="text-gray-600 text-sm mb-6 line-clamp-3">
+                            Designed and built a fast-paced remote control car heavily equipped with various active actuators specifically intended for a competitive Robo-Soccer tournament.
+                        </p>
+                        <button class="text-orange-600 text-sm font-medium hover:underline focus:outline-none mt-auto text-left">Read Full Data &rarr;</button>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200 transition hover:shadow-lg cursor-pointer project-card flex flex-col" onclick="openModal('rpi-infotainment')">
+                    <div class="h-48 bg-purple-100 flex items-center justify-center relative border-b border-purple-200">
+                        <span class="text-purple-600 font-semibold px-4 text-center">RPi 4B Infotainment</span>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <span class="text-xs font-bold text-purple-600 uppercase tracking-wider mb-2">Embedded Linux / AMTI</span>
+                        <h3 class="text-xl font-bold mb-3 text-gray-900">EV Infotainment & Lane Detection</h3>
+                        <p class="text-gray-600 text-sm mb-6 line-clamp-3">
+                            Created a full infotainment dashboard on a Raspberry Pi 4B to monitor an EV, integrating live image processing for lane detection algorithms.
+                        </p>
+                        <button class="text-purple-600 text-sm font-medium hover:underline focus:outline-none mt-auto text-left">Read Full Data &rarr;</button>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200 transition hover:shadow-lg cursor-pointer project-card flex flex-col" onclick="openModal('rpi-web-servo')">
+                    <div class="h-48 bg-red-50 relative overflow-hidden flex items-center justify-center border-b border-red-100">
+                        <div class="transform scale-[0.6] origin-center">
+                            <div class="flex items-center space-x-6 w-full justify-between">
+                                <div class="flex flex-col items-center">
+                                    <div class="w-16 h-12 bg-white border-2 border-red-300 rounded flex items-center justify-center shadow">
+                                        <span class="text-xs font-bold text-red-500">Browser</span>
+                                    </div>
+                                </div>
+                                <div class="w-12 border-t-4 border-dashed border-red-300 relative flex items-center justify-center">
+                                    <div class="w-3 h-3 bg-red-400 rounded-full"></div>
+                                </div>
+                                <div class="flex flex-col items-center">
+                                    <div class="w-20 h-24 bg-green-700 rounded-lg shadow-lg relative flex flex-col items-center pt-2">
+                                        <div class="w-10 h-10 bg-gray-900 mx-auto rounded flex items-center justify-center mb-2"><span class="text-[8px] text-gray-400">Chip</span></div>
+                                        <span class="text-[10px] text-white font-bold mt-2">RPi 4B</span>
+                                    </div>
+                                </div>
+                                <div class="w-8 border-t-2 border-solid border-gray-400"></div>
+                                <div class="flex flex-col items-center space-y-2">
+                                    <div class="w-8 h-8 rounded-full bg-red-500 border-2 border-red-700 shadow"></div>
+                                    <div class="w-10 h-6 bg-blue-500 rounded border border-blue-700 flex items-center justify-center shadow">
+                                        <div class="w-6 h-[2px] bg-white rotate-45 transform"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <span class="text-xs font-bold text-red-600 uppercase tracking-wider mb-2">IoT / Web Interface</span>
+                        <h3 class="text-xl font-bold mb-3 text-gray-900">Web-Controlled RPi 4B</h3>
+                        <p class="text-gray-600 text-sm mb-6 line-clamp-3">
+                            Directly interfaced a servo motor and LEDs using a Raspberry Pi 4B, controlled in real-time straight from a local web browser interface.
+                        </p>
+                        <button class="text-red-600 text-sm font-medium hover:underline focus:outline-none mt-auto text-left">Read Full Data &rarr;</button>
+                    </div>
+                </div>
+
+                <!-- Project 7 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200 transition hover:shadow-lg cursor-pointer project-card flex flex-col" onclick="openModal('ros2-simulation')">
+                    <img src="photos/rso2.png" alt="ROS 2 Mars Rover Simulation" class="w-full h-48 object-cover border-b border-gray-200" style="object-position: center;">
+                    <div class="p-6 flex-grow flex flex-col">
+                        <span class="text-xs font-bold text-teal-600 uppercase tracking-wider mb-2">C++ / ROS 2 / Py</span>
+                        <h3 class="text-xl font-bold mb-3 text-gray-900">Autonomous Mars Rover</h3>
+                        <p class="text-gray-600 text-sm mb-6 line-clamp-3">
+                            6-wheeled Mars rover simulation in ROS 2 Humble & Gazebo. Features realistic suspension, IMU, camera data processing, and active ArUco marker computer vision.
+                        </p>
+                        <button class="text-teal-600 text-sm font-medium hover:underline focus:outline-none mt-auto text-left">Read Full Data &rarr;</button>
+                    </div>
+                </div>
+
+                <!-- Project 8 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200 transition hover:shadow-lg cursor-pointer project-card flex flex-col" onclick="openModal('lidar-car')">
+                    <img src="photos/lidarcar.jpeg" alt="Autonomous LiDAR Car" class="w-full h-48 object-cover border-b border-gray-200">
+                    <div class="p-6 flex-grow flex flex-col">
+                        <span class="text-xs font-bold text-cyan-600 uppercase tracking-wider mb-2">Sensors / ROS / RPi 4B</span>
+                        <h3 class="text-xl font-bold mb-3 text-gray-900">Autonomous LiDAR Car</h3>
+                        <p class="text-gray-600 text-sm mb-6 line-clamp-3">
+                            Built a self-navigating autonomous vehicle using a Raspberry Pi 4B and a 2D LiDAR sensor to dynamically map rooms and avoid obstacles.
+                        </p>
+                        <button class="text-cyan-600 text-sm font-medium hover:underline focus:outline-none mt-auto text-left">Read Full Data &rarr;</button>
+                    </div>
+                </div>
+
+                <!-- Project 9 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200 transition hover:shadow-lg cursor-pointer project-card flex flex-col" onclick="openModal('autoclave-sterilizer')">
+                    <img src="photos/autoclave.png" alt="Autoclave Sterilizer Controller" class="w-full h-48 object-cover border-b border-gray-200">
+                    <div class="p-6 flex-grow flex flex-col">
+                        <span class="text-xs font-bold text-indigo-600 uppercase tracking-wider mb-2">Hardware Design / Embedded C</span>
+                        <h3 class="text-xl font-bold mb-3 text-gray-900">Autoclave Sterilizer</h3>
+                        <p class="text-gray-600 text-sm mb-6 line-clamp-3">
+                            Engineered the main hardware and embedded control logic for a medical Autoclave Sterilizer system at ChemTech, handling extreme pressure variables.
+                        </p>
+                        <button class="text-indigo-600 text-sm font-medium hover:underline focus:outline-none mt-auto text-left">Read Full Data &rarr;</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+Volunteering CTA Section -->
+    <section class="py-16 bg-blue-600 text-white text-center">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-4">Giving Back to the Community</h2>
+            <p class="text-blue-100 text-lg mb-8">Take a look at my volunteering journey, mentoring, and community initiatives.</p>
+            <a href="volunteering.html" class="inline-block bg-white text-blue-600 px-8 py-3 rounded-full font-bold shadow-lg hover:bg-gray-100 transition transform hover:-translate-y-1">
+                View Volunteering Experience
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-900 text-white text-center">
+        <div class="max-w-3xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-6">Let's build something together.</h2>
+            <p class="text-gray-400 mb-10">Feel free to reach out for collaborations or just a friendly hello.</p>
+            <a href="mailto:saif.elden.mahmoud01@gmail.com" class="bg-blue-600 text-white px-8 py-4 rounded-full font-bold shadow-lg hover:bg-blue-500 transition">
+                saif.elden.mahmoud01@gmail.com
+            </a>
+            <div class="mt-12 flex justify-center space-x-6">
+                <a href="https://www.linkedin.com/in/saifeldeen2004/" target="_blank" class="text-gray-400 hover:text-white transition">LinkedIn</a>
+                <a href="https://github.com/saifelden1" target="_blank" class="text-gray-400 hover:text-white transition">GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-950 py-8 text-center text-gray-500 text-sm border-t border-gray-900">
+        <p>&copy; 2026 Saif Elden. All rights reserved.</p>
+    </footer>
+
+    <!-- Project Modal Overlay -->
+    <div id="project-modal" class="fixed inset-0 z-[100] hidden bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 transition-opacity duration-300 opacity-0">
+        <div class="bg-white rounded-2xl w-full max-w-4xl max-h-[90vh] overflow-y-auto shadow-2xl transform transition-transform duration-300 scale-95 flex flex-col" id="modal-content-container">
+            <!-- Modal Header / Close button -->
+            <div class="sticky top-0 right-0 p-4 flex justify-end z-10 pointer-events-none">
+                <button id="close-modal" class="pointer-events-auto bg-gray-100 hover:bg-gray-200 text-gray-800 rounded-full p-2 focus:outline-none transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Modal Content (dynamically injected) -->
+            <div id="modal-body" class="px-8 pb-10 pt-2 -mt-12 text-left">
+                <!-- Data injected here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Viewer Modal Overlay -->
+    <div id="image-viewer-modal" class="fixed inset-0 z-[200] hidden bg-black/95 backdrop-blur-sm flex items-center justify-center p-4 transition-opacity duration-300 opacity-0" onclick="closeImageViewer()">
+        <button class="absolute top-4 right-4 text-white hover:text-gray-300 p-2 focus:outline-none z-10" onclick="closeImageViewer()">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+        <img id="full-size-image" src="" alt="Full size view" class="max-w-full max-h-[90vh] object-contain rounded shadow-2xl transform transition-transform duration-300 scale-95" onclick="event.stopPropagation()">
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Project Data Structure (Real data from CV)
+        const projectData = {
+            'ev-control': {
+                category: 'Embedded C / IoT / Hardware Design',
+                title: 'EV Embedded Control System',
+                image: `
+                    <div class="mb-8">
+                        <img src="photos/apexwork.jpeg" alt="Apex Team Work" class="w-full h-80 object-cover rounded-xl shadow border border-gray-100 cursor-pointer hover:opacity-80 transition" onclick="openImageViewer(this.src)">
+                    </div>
+                `,
+                description: `
+                    <p class="mb-6 text-lg text-gray-700">
+                        Developed the EV control system from scratch for competing in the Shell Eco-Marathon (SEM) with the APEX racing team. The system is designed to provide a real-car experience while pushing the limits of extreme energy efficiency. Our team successfully scored <strong>1st place in the Autonomous category at EVER 2025</strong>!
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+                        <img src="photos/apexBlockDiagramController.png" alt="Controller Architecture Diagram" class="w-full h-64 object-contain bg-gray-50 rounded-xl shadow border border-gray-200 cursor-pointer hover:opacity-80 transition" onclick="openImageViewer(this.src)">
+                        <img src="photos/ApexPCB.jpg" alt="Custom PCB Design" class="w-full h-64 object-cover rounded-xl shadow border border-gray-200 cursor-pointer hover:opacity-80 transition" onclick="openImageViewer(this.src)">
+                    </div>
+
+                    <h4 class="text-xl font-bold mb-4 border-b pb-2">Power & Hardware Design</h4>
+                    <ul class="list-disc pl-5 mb-10 text-gray-700 space-y-2">
+                        <li>Designed a custom 3-board PCB system using KiCad: one Central Management board and two dedicated Motor Control boards.</li>
+                        <li>Integrated 3x STM32 controllers alongside an ESP32, LoRa Module, GSM, Encoders, and an IMU.</li>
+                        <li>Extensively calculated and designed custom MOSFET power stages for accurate thermal and load management.</li>
+                        <li>Engineered and calculated a custom battery pack to ensure optimal endurance and output.</li>
+                    </ul>
+
+                    <div class="mb-10 p-6 bg-yellow-50 border border-yellow-100 rounded-xl shadow-sm flex flex-col md:flex-row items-center gap-6">
+                        <img src="photos/Apexbestmember.png" alt="Best Member Award" class="w-32 h-32 md:w-48 md:h-48 object-cover rounded-full shadow-lg border-4 border-white cursor-pointer hover:scale-105 transition" onclick="openImageViewer(this.src)">
+                        <div>
+                            <h4 class="text-2xl font-bold text-yellow-800 mb-2">APEX Best Member</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Beyond technical contributions, I was recognized as the <strong>Best Member</strong> of the APEX racing team. This achievement reflects my consistent dedication, teamwork, and leadership within the engineering process from initial system architecture to the final track day.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+                        <img src="photos/ApexCodeView.png" alt="C/C++ Code Architecture" class="w-full h-56 object-cover rounded-xl shadow border border-gray-200 cursor-pointer hover:opacity-80 transition" onclick="openImageViewer(this.src)">
+                        <video autoplay loop muted playsinline class="w-full h-56 object-cover rounded-xl shadow border border-gray-200 pointer-events-none">
+                            <source src="photos/apexworj2.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <img src="photos/apexScreen.png" alt="Nextion GUI Display" class="w-full h-56 object-contain bg-gray-50 rounded-xl shadow border border-gray-200 cursor-pointer hover:opacity-80 transition" onclick="openImageViewer(this.src)">
+                    </div>
+
+                    <h4 class="text-xl font-bold mb-4 border-b pb-2">Software Architecture & Dynamics</h4>
+                    <ul class="list-disc pl-5 mb-6 text-gray-700 space-y-2">
+                        <li>Built a robust CAN bus network synchronizing the three STM32 units for immediate response times.</li>
+                        <li>Utilized FOC (Field Oriented Control) for precise, silent BLDC motor actuation.</li>
+                        <li>Implemented an Electronic Differential system, drastically reducing friction and maintaining supreme efficiency in corners.</li>
+                        <li>Added a Regenerative Braking system to seamlessly recapture kinetic energy into the battery.</li>
+                        <li>Setup a LoRaWAN telemetry backbone connecting the live car sensor data directly to a debugging and tracking station in real-time.</li>
+                        <li>Designed and coded the entire driver dashboard GUI using Nextion Display Software.</li>
+                    </ul>
+                `
+            },
+            'pc-control': {
+                category: 'C++ / Networking',
+                title: 'Remote PC Command Server',
+                image: `
+                    <div class="h-64 sm:h-80 bg-indigo-50 flex items-center justify-center rounded-xl mb-6 shadow-inner border border-indigo-100 relative overflow-hidden text-center">
+                        <img src="photos/remoteeserver.png" alt="Remote PC Command Server" class="w-full h-full object-cover">
+                    </div>
+                `,
+                description: `
+                    <p class="mb-4 text-lg">Built a TCP server in C++ to receive and execute remote PC commands efficiently over a networked environment.</p>
+                    <p class="mb-4 text-gray-700 leading-relaxed">
+                        This project implements a modular TCP server application in C++ that continuously listens for client requests and executes remote OS-level system actions.
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+                        <img src="photos/remoteeserver.png" alt="Remote Server Architecture" class="w-full h-56 object-cover rounded-xl shadow border border-gray-200 cursor-pointer hover:opacity-80 transition" onclick="openImageViewer(this.src)">
+                        <img src="photos/remote server2 .png" alt="Remote Server Interface" class="w-full h-56 object-cover rounded-xl shadow border border-gray-200 cursor-pointer hover:opacity-80 transition" onclick="openImageViewer(this.src)">
+                    </div>
+                    
+                    <h4 class="text-xl font-bold mt-8 mb-4 border-b pb-2">Methodology & System Flow</h4>
+                    <p class="mb-4 text-gray-700 leading-relaxed">
+                        The system is designed with a highly modular client-server architecture utilizing a strict Request <strong>(COMMAND|PARAMETER)</strong> and Response <strong>(OK|... or ERROR|...)</strong> format.
+                    </p>
+                    <p class="mb-4 text-gray-700 leading-relaxed">
+                        When a request like <code class="bg-gray-100 px-1 rounded text-red-600">LAUNCH|Chrome</code> is transmitted over the TCP socket, the <strong>Server</strong> forwards it to the <strong>CommandParser</strong>. This isolates the raw string into a structured Command object. It is then passed to the <strong>ActionHandler</strong>, which determines the specific routine (like <code>LaunchAppAction</code>) to execute actual system-level background processes. Finally, a <strong>ResponseGenerator</strong> formats the success/failure state while the <strong>LoggingSystem</strong> records the timestamped event to memory.
+                    </p>
+
+                    <h4 class="text-xl font-bold mt-6 mb-4 border-b pb-2">Technical Highlights</h4>
+                    <ul class="list-disc pl-5 mb-6 text-gray-700 space-y-2">
+                        <li><strong>Modular Design:</strong> Separated concerns using distinct C++ classes (<code>Server</code>, <code>CommandParser</code>, <code>ActionHandler</code>, <code>ResponseGenerator</code>, and <code>LoggingSystem</code>).</li>
+                        <li><strong>Socket Programming:</strong> Implemented robust low-latency TCP communication layers.</li>
+                        <li><strong>Command Processing:</strong> Engineered reliable string parsing and process execution to control the OS safely.</li>
+                        <li><strong>Complete Prototype:</strong> Serves as a full end-to-end C++ system demonstrating maintainable design and clean standard logging
+                `
+            },
+            'tomatiki': {
+                category: 'Hardware Design / Embedded',
+                title: 'Tomatiki Smart Solutions',
+                image: `
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                        <img src="photos/tomatiki 6.png" class="w-full h-32 object-cover rounded-xl shadow border border-gray-100 cursor-pointer hover:opacity-80 transition" onclick="openImageViewer(this.src)">
+                        <img src="photos/tomatiki 8.png" class="w-full h-32 object-cover rounded-xl shadow border border-gray-100 cursor-pointer hover:opacity-80 transition" onclick="openImageViewer(this.src)">
+                        <img src="photos/tomatiki 88.png" class="w-full h-32 object-cover rounded-xl shadow border border-gray-100 cursor-pointer hover:opacity-80 transition" onclick="openImageViewer(this.src)">
+                        <img src="photos/tomatiki 99.png" class="w-full h-32 object-cover rounded-xl shadow border border-gray-100 cursor-pointer hover:opacity-80 transition" onclick="openImageViewer(this.src)">
+                    </div>
+                `,
+                description: `
+                    <p class="mb-4 text-lg">Developed over 10 distinct custom printed circuit boards (PCBs) spanning various industrial and agricultural use cases during my time with Tomatiki Smart Solutions.</p>
+                    <h4 class="text-xl font-bold mt-8 mb-4 border-b pb-2">Key Highlights</h4>
+                    <ul class="list-disc pl-5 mb-6 text-gray-700 space-y-2">
+                        <li><strong>Refrigerator Tester:</strong> Designed the complete hardware circuitry and embedded logic to stress-test industrial cooling equipment.</li>
+                        <li><strong>Agricultural Valve & Pump Management:</strong> Designed a distributed electronic system controlling remote pumps and valves across large agricultural fields.</li>
+                        <li><strong>LoRa Mesh Network:</strong> Established a robust communication backbone utilizing LoRa technology to transmit telemetry and command data across distant nodes back to a central master node.</li>
+                        <li>Single-handedly managed both the physical PCB routing and layout alongside the low-level embedded C programming for the hardware.</li>
+                    </ul>
+                `
+            },
+            'robo-soccer': {
+                category: 'Robotics / Actuators',
+                title: 'Robo-Soccer Competition Car',
+                image: `
+                    <div class="mb-8">
+                        <img src="photos/rc car.jpeg" alt="Robo-Soccer RC Car" class="w-full h-80 object-cover rounded-xl shadow border border-gray-100 cursor-pointer hover:opacity-80 transition" onclick="openImageViewer(this.src)">
+                    </div>
+                `,
+                description: `
+                    <p class="mb-4 text-lg">Engineered a highly responsive remote-controlled robot specifically built to compete in a fast-paced Robo-Soccer tournament.</p>
+                    <h4 class="text-xl font-bold mt-8 mb-4 border-b pb-2">Technical Details</h4>
+                    <ul class="list-disc pl-5 mb-6 text-gray-700 space-y-2">
+                        <li><strong>Complete Hardware Ownership:</strong> Designed the custom PCB, handled all electrical connections, and wrote the low-level firmware code.</li>
+                        <li><strong>Bluetooth Control:</strong> The vehicle was remote-controlled primarily using seamless Bluetooth communication for instantaneous driver feedback.</li>
+                        <li><strong>Actuation System:</strong> Integrated 4 distinct servos along with a powerful pneumatic piston system specifically designed for gripping, holding, and effectively kicking the ball.</li>
+                        <li>Optimized motor drivers for rapid acceleration and tight cornering to outmaneuver opponent robots during competitive matches.</li>
+                    </ul>
+                `
+            },
+            'rpi-infotainment': {
+                category: 'Embedded Linux / AMTI',
+                title: 'EV Infotainment & Lane Detection',
+                image: '<div class="h-64 sm:h-80 bg-purple-50 flex items-center justify-center rounded-xl mb-6 shadow-inner border border-purple-100"><span class="text-purple-400 font-medium">Embedded Linux & Computer Vision</span></div>',
+                description: `
+                    <p class="mb-4 text-lg">Developed a comprehensive EV Infotainment Dashboard running entirely on a Raspberry Pi 4B, created as a capstone for my AMTI Embedded Linux diploma.</p>
+                    <h4 class="text-xl font-bold mt-8 mb-4 border-b pb-2">System Capabilities</h4>
+                    <ul class="list-disc pl-5 mb-6 text-gray-700 space-y-2">
+                        <li>Built a full GUI infotainment system that manages secondary vehicle controls and metrics.</li>
+                        <li>Integrated an active camera feed with real-time image processing algorithms.</li>
+                        <li>Implemented live Lane Detection utilizing OpenCV, alerting the driver when drifting across road markings.</li>
+                        <li>Leveraged Embedded Linux foundations to cross-compile software and optimize the OS layer for the Raspberry Pi environment.</li>
+                    </ul>
+                `
+            },
+            'rpi-web-servo': {
+                category: 'IoT / Web Interface',
+                title: 'Web-Controlled RPi Hardware',
+                image: `
+                    <div class="h-64 sm:h-80 bg-red-50 flex items-center justify-center rounded-xl mb-6 shadow-inner border border-red-100 overflow-hidden relative">
+                        <!-- Simple conceptual graphic for Web to Hardware -->
+                        <div class="flex items-center space-x-6 z-10 w-full px-12 justify-between">
+                            <!-- Laptop Node -->
+                            <div class="flex flex-col items-center">
+                                <div class="w-16 h-12 bg-white border-2 border-red-300 rounded flex items-center justify-center shadow">
+                                    <span class="text-xs font-bold text-red-400">Browser</span>
+                                </div>
+                                <div class="w-20 h-2 bg-red-200 mt-1 rounded"></div>
+                            </div>
+                            
+                            <!-- Fetch Request line -->
+                            <div class="flex-1 border-t-4 border-dashed border-red-300 relative flex items-center justify-center">
+                                <span class="absolute -top-6 text-xs font-bold text-gray-500 bg-white px-2 rounded-full border border-gray-100">AJAX / Fetch</span>
+                                <div class="w-3 h-3 bg-red-400 rounded-full animate-ping"></div>
+                            </div>
+
+                            <!-- RPi Node -->
+                            <div class="flex flex-col items-center">
+                                <div class="w-20 h-24 bg-green-700 rounded-lg shadow-lg relative flex flex-col items-center pt-2">
+                                    <div class="w-10 h-10 bg-gray-900 mx-auto rounded flex items-center justify-center mb-2"><span class="text-[8px] text-gray-400">Broadcom</span></div>
+                                    <div class="flex space-x-1">
+                                        <div class="w-1 h-3 bg-gray-300"></div><div class="w-1 h-3 bg-gray-300"></div><div class="w-1 h-3 bg-gray-300"></div><div class="w-1 h-3 bg-gray-300"></div>
+                                    </div>
+                                    <span class="text-[10px] text-white font-bold mt-2">RPi 4B</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Actuators line -->
+                            <div class="w-12 border-t-2 border-solid border-gray-400"></div>
+                            
+                            <!-- Actuators Node -->
+                            <div class="flex flex-col items-center space-y-4">
+                                <div class="w-10 h-10 rounded-full bg-red-500 border-4 border-red-700 shadow-[0_0_15px_rgba(239,68,68,0.6)]"></div>
+                                <div class="w-12 h-8 bg-blue-500 rounded border border-blue-700 flex items-center justify-center shadow">
+                                    <div class="w-8 h-1 bg-white rotate-45 transform"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `,
+                description: `
+                    <p class="mb-4 text-lg">Bridged the gap between modern web development and physical hardware by controlling an LED and a Servo motor via a web browser.</p>
+                    <h4 class="text-xl font-bold mt-8 mb-4 border-b pb-2">Implementation Technique</h4>
+                    <p class="mb-4 text-gray-700 leading-relaxed">
+                        I hosted a lightweight Python Flask web server directly on the Raspberry Pi 4B. The server served a simple HTML/JS frontend. When a user presses a button on the webpage, the JavaScript uses standard <strong>AJAX (Fetch API)</strong> to send asynchronous HTTP requests in the background. The connected Flask server receives these requests immediately and translates them into physical GPIO commands—switching the LED high/low, or adjusting the PWM duty cycle to rotate the servo to a specific angle.
+                    </p>
+                `
+            },
+            'lidar-car': {
+                category: 'Sensors / ROS / RPi 4B',
+                title: 'Autonomous LiDAR Navigating Car',
+                image: `
+                    <div class="mb-8">
+                        <img src="photos/lidarcar.jpeg" alt="Autonomous LiDAR Car Hardware" class="w-full h-80 object-cover rounded-xl shadow border border-gray-100 cursor-pointer hover:opacity-80 transition" onclick="openImageViewer(this.src)">
+                    </div>
+                `,
+                description: `
+                    <p class="mb-4 text-lg">Constructed an autonomous navigating vehicle using a Raspberry Pi 4B brains and a rotating 2D LiDAR sensor for absolute spatial awareness.</p>
+                    <h4 class="text-xl font-bold mt-8 mb-4 border-b pb-2">Technical Overview</h4>
+                    <ul class="list-disc pl-5 mb-6 text-gray-700 space-y-2">
+                        <li><strong>Environment Mapping:</strong> Programmed a ROS package utilizing the 2D LiDAR data to generate real-time grid maps of physical rooms.</li>
+                        <li><strong>Obstacle Avoidance:</strong> Implemented pathfinding algorithms that dynamically alter the car's steering vector when the LiDAR detects impending physical boundaries or moving obstacles.</li>
+                        <li>Calculated odometry internally via the Raspberry Pi 4B to precisely estimate the vehicle's position within its newly generated map framework.</li>
+                    </ul>
+                `
+            },
+            'autoclave-sterilizer': {
+                category: 'Hardware Design / Embedded C',
+                title: 'Autoclave Sterilizer Controller',
+                image: `
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                        <div class="relative">
+                            <span class="absolute top-2 left-2 bg-gray-900 text-white text-xs px-2 py-1 rounded shadow z-10">Old Design</span>
+                            <img src="photos/autoclave.png" alt="Autoclave Old Design" class="w-full h-80 object-cover rounded-xl shadow border border-gray-100 cursor-pointer hover:opacity-80 transition" onclick="openImageViewer(this.src)">
+                        </div>
+                        <div class="relative">
+                            <span class="absolute top-2 left-2 bg-blue-600 text-white text-xs px-2 py-1 rounded shadow z-10">ChemTech Integration</span>
+                            <img src="photos/chemtech work.png" alt="Chemtech work" class="w-full h-80 object-contain bg-white rounded-xl shadow border border-gray-100 cursor-pointer hover:opacity-80 transition" onclick="openImageViewer(this.src)">
+                        </div>
+                    </div>
+                `,
+                description: `
+                    <p class="mb-4 text-lg">Engineered the core control unit for a medical Autoclave Sterilizer during my time at ChemTech, ensuring precise thermal and pneumatic regulation.</p>
+                    <h4 class="text-xl font-bold mt-8 mb-4 border-b pb-2">Engineering Responsibilities</h4>
+                    <ul class="list-disc pl-5 mb-6 text-gray-700 space-y-2">
+                        <li><strong>Hardware Design:</strong> Upgraded the legacy/old design system to a modern, robust PCB array capable of handling higher currents and sensor interfaces.</li>
+                        <li><strong>Firmware Development:</strong> Programmed strict temperature monitoring loops using Embedded C to govern high-pressure steam outputs without surpassing critical safety margins.</li>
+                        <li><strong>Component Integration:</strong> Interfaced safely with pressure release valves, heating elements, and user display screens within the main enclosure block.</li>
+                    </ul>
+                `
+            },
+            'ros2-simulation': {
+                category: 'C++ / ROS 2 / Py',
+                title: 'ROS 2 + Gazebo Rover Simulation',
+                image: '<img src="photos/rso2.png" alt="ROS 2 Simulation" class="w-full h-full object-cover rounded-xl mb-6">',
+                description: `
+                    <p class="mb-4 text-lg">Built a comprehensive 6-wheeled Mars rover simulation using ROS 2 Humble and Gazebo Ignition. Features active sensor suites, IMU processing, and camera perception.</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+                        <img src="photos/rso2.png" alt="ROS 2 Simulation View 1" class="w-full h-56 object-cover rounded-xl shadow border border-gray-200 cursor-pointer hover:opacity-80 transition" onclick="openImageViewer(this.src)">
+                        <img src="photos/rso22.png" alt="ROS 2 Simulation View 2" class="w-full h-56 object-cover rounded-xl shadow border border-gray-200 cursor-pointer hover:opacity-80 transition" onclick="openImageViewer(this.src)">
+                        <img src="photos/rso222.png" alt="ROS 2 Simulation View 3" class="w-full h-56 object-cover rounded-xl shadow border border-gray-200 cursor-pointer hover:opacity-80 transition" onclick="openImageViewer(this.src)">
+                    </div>
+
+                    <h4 class="text-xl font-bold mt-8 mb-4 border-b pb-2">Technical Implementation</h4>
+                    <ul class="list-disc pl-5 mb-6 text-gray-700 space-y-2">
+                        <li><strong>Mechanical Modeling:</strong> Designed a differential drive rover with fully articulated suspension arms using a modular URDF/Xacro layout.</li>
+                        <li><strong>Sensory Data Bridging:</strong> Configured a ros_gz_bridge translating Gazebo outputs (like realistic 100Hz IMU limits and 30Hz RGB camera with noise variables) instantly into standardized ROS 2 topics.</li>
+                        <li><strong>Computer Vision Node:</strong> Programmed a dedicated image detection node using **Python** and **OpenCV** to rapidly process raw camera frames to hunt for and specifically identify targeted **ArUco marker** codes scattered in a 6m×6m world.</li>
+                        <li><strong>Teleoperation:</strong> Integrated a Python-driven Teleop GUI, using sliders for seamless real-time velocity publishing.</li>
+                    </ul>
+                `
+            }
+        };
+
+        const modal = document.getElementById('project-modal');
+        const modalContentContainer = document.getElementById('modal-content-container');
+        const modalBody = document.getElementById('modal-body');
+        const closeModalBtn = document.getElementById('close-modal');
+
+        function openModal(projectId) {
+            const data = projectData[projectId];
+            if (!data) return;
+
+            // Inject data
+            modalBody.innerHTML = `
+                <div class="mb-2">
+                    <span class="text-sm font-bold text-blue-600 uppercase tracking-wider bg-blue-50 px-3 py-1 rounded-full">${data.category}</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold mt-4 mb-6 text-gray-900">${data.title}</h2>
+                ${data.image}
+                <div class="text-gray-800 leading-relaxed max-w-none">
+                    ${data.description}
+                </div>
+            `;
+
+            // Display modal
+            modal.classList.remove('hidden');
+            // Force reflow
+            void modal.offsetWidth;
+            
+            modal.classList.remove('opacity-0');
+            modal.classList.add('opacity-100');
+            modalContentContainer.classList.remove('scale-95');
+            modalContentContainer.classList.add('scale-100');
+            
+            // Prevent body scrolling
+            document.body.style.overflow = 'hidden';
+            
+            // Reset scroll position of modal content
+            modalContentContainer.scrollTop = 0;
+        }
+
+        function closeModal() {
+            modal.classList.remove('opacity-100');
+            modal.classList.add('opacity-0');
+            modalContentContainer.classList.remove('scale-100');
+            modalContentContainer.classList.add('scale-95');
+            
+            // Wait for animation to finish before hiding
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                document.body.style.overflow = '';
+            }, 300);
+        }
+
+        closeModalBtn.addEventListener('click', closeModal);
+
+        // Close on clicking outside the modal content
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Image Viewer Logic
+        const imageViewer = document.getElementById('image-viewer-modal');
+        const fullSizeImage = document.getElementById('full-size-image');
+
+        function openImageViewer(src) {
+            fullSizeImage.src = src;
+            imageViewer.classList.remove('hidden');
+            void imageViewer.offsetWidth; // Force reflow
+            
+            imageViewer.classList.remove('opacity-0');
+            imageViewer.classList.add('opacity-100');
+            fullSizeImage.classList.remove('scale-95');
+            fullSizeImage.classList.add('scale-100');
+        }
+
+        function closeImageViewer() {
+            imageViewer.classList.remove('opacity-100');
+            imageViewer.classList.add('opacity-0');
+            fullSizeImage.classList.remove('scale-100');
+            fullSizeImage.classList.add('scale-95');
+            
+            setTimeout(() => {
+                imageViewer.classList.add('hidden');
+                fullSizeImage.src = '';
+            }, 300);
+        }
+
+        // Close on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                if (!imageViewer.classList.contains('hidden')) {
+                    closeImageViewer();
+                } else if (!modal.classList.contains('hidden')) {
+                    closeModal();
+                }
+            }
+        });
+    </script>
+</body>
+</html>
