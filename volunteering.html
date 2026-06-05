@@ -21,6 +21,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 700ms ease-out, transform 700ms ease-out;
+        }
+        .reveal.is-visible { opacity: 1; transform: translateY(0); }
+        .page-hero-bg {
+            background-image:
+                radial-gradient(circle at 20% 30%, rgba(37, 99, 235, 0.07), transparent 45%),
+                radial-gradient(circle at 80% 70%, rgba(79, 70, 229, 0.07), transparent 45%);
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -40,18 +51,20 @@
     </nav>
 
     <!-- Header -->
-    <header class="max-w-6xl mx-auto px-4 py-20 text-center">
-        <h1 class="text-5xl font-bold tracking-tight text-gray-900 mb-6">My Volunteering Experience</h1>
-        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-            I believe engineering isn't just about building technology, it's about sharing knowledge and empowering the community. Here are some of the initiatives I've been a part of.
-        </p>
+    <header class="page-hero-bg">
+        <div class="max-w-6xl mx-auto px-4 py-20 text-center">
+            <h1 class="text-5xl font-bold tracking-tight text-gray-900 mb-6">My Volunteering Experience</h1>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                I believe engineering isn't just about building technology, it's about sharing knowledge and empowering the community. Here are some of the initiatives I've been a part of.
+            </p>
+        </div>
     </header>
 
     <!-- Experience Timeline Sections -->
     <section class="max-w-6xl mx-auto px-4 py-12 space-y-32 mb-24 overflow-hidden">
         
         <!-- Item 1: RiseUp 26 (Photo Left) -->
-        <div class="flex flex-col md:flex-row items-center gap-12 group">
+        <div class="flex flex-col md:flex-row items-center gap-12 group reveal">
             <div class="w-full md:w-1/2 flex justify-start perspective-1000">
                 <div class="w-11/12 md:w-4/5 h-80 bg-gray-200 rounded-2xl shadow-xl overflow-hidden transform transition duration-500 hover:scale-105 hover:-rotate-2 shadow-blue-500/20 -translate-x-4">
                     <img src="photos/Riseup 2025.jpeg" alt="RiseUp Summit 26" class="w-full h-full object-cover">
@@ -71,7 +84,7 @@
         </div>
 
         <!-- Item 2: RiseUp 25 (Photo Right) -->
-        <div class="flex flex-col md:flex-row-reverse items-center gap-12 group">
+        <div class="flex flex-col md:flex-row-reverse items-center gap-12 group reveal">
             <div class="w-full md:w-1/2 flex justify-end perspective-1000">
                 <div class="w-11/12 md:w-4/5 h-80 bg-gray-200 rounded-2xl shadow-xl overflow-hidden transform transition duration-500 hover:scale-105 hover:rotate-2 shadow-amber-500/20 translate-x-4">
                     <img src="photos/riseup 25.jpeg" alt="RiseUp Summit 25" class="w-full h-full object-cover">
@@ -91,7 +104,7 @@
         </div>
 
         <!-- Item 3: Proptech (Photo Left) -->
-        <div class="flex flex-col md:flex-row items-center gap-12 group">
+        <div class="flex flex-col md:flex-row items-center gap-12 group reveal">
             <div class="w-full md:w-1/2 flex justify-start perspective-1000">
                 <div class="w-11/12 md:w-4/5 h-80 bg-gray-200 rounded-2xl shadow-xl overflow-hidden transform transition duration-500 hover:scale-105 hover:-rotate-2 shadow-emerald-500/20 -translate-x-4">
                     <img src="photos/proptech 25.jpeg" alt="Proptech 2025" class="w-full h-full object-cover">
@@ -111,7 +124,7 @@
         </div>
 
         <!-- Item 4: ECS 9th Edition (Photo Right) -->
-        <div class="flex flex-col md:flex-row-reverse items-center gap-12 group">
+        <div class="flex flex-col md:flex-row-reverse items-center gap-12 group reveal">
             <div class="w-full md:w-1/2 flex justify-end perspective-1000">
                 <div class="w-11/12 md:w-4/5 h-80 bg-gray-200 rounded-2xl shadow-xl overflow-hidden transform transition duration-500 hover:scale-105 hover:rotate-2 shadow-indigo-500/20 translate-x-4">
                     <img src="photos/ecs 2025 9th.jpeg" alt="ECS 9th Edition" class="w-full h-full object-cover">
@@ -130,7 +143,7 @@
         </div>
 
         <!-- Item 5: ECS 8th Edition (Photo Left) -->
-        <div class="flex flex-col md:flex-row items-center gap-12 group">
+        <div class="flex flex-col md:flex-row items-center gap-12 group reveal">
             <div class="w-full md:w-1/2 flex justify-start perspective-1000">
                 <div class="w-11/12 md:w-4/5 h-80 bg-gray-200 rounded-2xl shadow-xl overflow-hidden transform transition duration-500 hover:scale-105 hover:-rotate-2 shadow-purple-500/20 -translate-x-4">
                     <img src="photos/ecs 8th ed 2024.jpg" alt="ECS 8th Edition" class="w-full h-full object-cover" style="object-position: center top;">
@@ -149,7 +162,7 @@
         </div>
 
         <!-- Item 6: GRC Competition (Photo Right) -->
-        <div class="flex flex-col md:flex-row-reverse items-center gap-12 group">
+        <div class="flex flex-col md:flex-row-reverse items-center gap-12 group reveal">
             <div class="w-full md:w-1/2 flex justify-end perspective-1000">
                 <div class="w-11/12 md:w-4/5 h-80 bg-gray-200 rounded-2xl shadow-xl overflow-hidden transform transition duration-500 hover:scale-105 hover:rotate-2 shadow-red-500/20 translate-x-4">
                     <img src="photos/grc.jpeg" alt="GRC Competition Safety Judge" class="w-full h-full object-cover object-top">
@@ -174,5 +187,16 @@
         <p>&copy; 2026 Saif Elden. All rights reserved.</p>
     </footer>
 
+    <script>
+        const obs = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    e.target.classList.add('is-visible');
+                    obs.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.12 });
+        document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+    </script>
 </body>
 </html>
